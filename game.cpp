@@ -39,7 +39,7 @@ void Game::playTurn(Agent& currAgent) {
 			currAgent.updateIsInJail();
 		}
 	}
-	else if (board.getFields()[currAgent.getField()]->getType() == SquareType::city) { /*else if na wszelki wypadek, jakby cos zle poszlo z enum*/
+	else if (board.getFields()[currAgent.getField()]->getType() == SquareType::city) { 
 		SquareCity* squareCity = dynamic_cast<SquareCity*>(board.getFields()[drawnField]);
 		
 		bool isOwner = currAgent.checkIfOwn(squareCity);
